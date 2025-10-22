@@ -1,0 +1,32 @@
+{
+  "flickr8k": {
+    "metrics": {
+      "top_1": 0.8000000715255737,
+      "top_5": 0.9750000238418579,
+      "top_10": 1.0
+    },
+    "media": {
+      "correct_top1": "/storage/ice1/5/0/vvobbilisetty6/Neural_pro/eval_git_results/flickr8k_test/correct_top1.png",
+      "incorrect_top1": "/storage/ice1/5/0/vvobbilisetty6/Neural_pro/eval_git_results/flickr8k_test/incorrect_top1.png",
+      "correct_top5": "/storage/ice1/5/0/vvobbilisetty6/Neural_pro/eval_git_results/flickr8k_test/correct_top5.png",
+      "incorrect_top5": "/storage/ice1/5/0/vvobbilisetty6/Neural_pro/eval_git_results/flickr8k_test/incorrect_top5.png",
+      "correct_top10": "/storage/ice1/5/0/vvobbilisetty6/Neural_pro/eval_git_results/flickr8k_test/correct_top10.png",
+      "incorrect_top10": null
+    }
+  },
+  "gallery": {
+    "metrics": {
+      "top_1": 0.9000000357627869,
+      "top_5": 1.0,
+      "top_10": 1.0
+    },
+    "media": {
+      "correct_top1": "/storage/ice1/5/0/vvobbilisetty6/Neural_pro/eval_git_results/gallery/correct_top1.png",
+      "incorrect_top1": "/storage/ice1/5/0/vvobbilisetty6/Neural_pro/eval_git_results/gallery/incorrect_top1.png",
+      "correct_top5": "/storage/ice1/5/0/vvobbilisetty6/Neural_pro/eval_git_results/gallery/correct_top5.png",
+      "incorrect_top5": null,
+      "correct_top10": "/storage/ice1/5/0/vvobbilisetty6/Neural_pro/eval_git_results/gallery/correct_top10.png",
+      "incorrect_top10": null
+    }
+  }
+}

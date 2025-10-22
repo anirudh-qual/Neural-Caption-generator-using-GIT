@@ -1,0 +1,25 @@
+name: blip
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip
+  
+  # PyTorch (use conda for base install, smaller download)
+  - pytorch::pytorch=2.4.0
+  - pytorch::torchvision=0.21.0
+  - pytorch::pytorch-cuda=12.4
+  
+  # Pip packages (lightweight essentials only)
+  - pip:
+      - transformers>=4.40.0
+      - datasets>=2.18.0
+      - peft>=0.10.0
+      - accelerate>=0.28.0
+      - typer>=0.12.0
+      - huggingface-hub>=0.22.0
+      - pillow>=10.0.0
+      - safetensors>=0.4.0
