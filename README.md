@@ -4,20 +4,20 @@ Neural Caption Generator using GIT fine-tunes Microsoft's [GIT](https://huggingf
 
 
 ## Key Features
-- **Fine-tuning focused on text generation.** The image encoder is frozen and only the language modeling head updates, enabling efficient adaptation on modest hardware.【F:train.py†L55-L64】【F:train.py†L101-L115】
-- **Distributed-aware training loop.** Data preprocessing is coordinated across workers with the 🤗 Accelerate `Accelerator` utility and saved to disk for reuse before launching the Hugging Face `Trainer`. Training arguments default to bf16 mixed precision, gradient accumulation, and DDP-safe settings for multi-GPU jobs.【F:train.py†L66-L118】【F:config.yaml†L1-L8】
-- **Flexible evaluation tooling.** `eval.py` supports both CLIP-style embedding retrieval and GIT-based autoregressive similarity scoring, producing metrics, qualitative grids, and reports for Flickr8k or custom galleries.【F:eval.py†L24-L273】【F:eval.py†L343-L412】
-- **Captioning for personal collections.** `generate_gallery_captions.py` batches gallery images, runs beam-search or nucleus sampling, and writes JSON manifests for downstream use.【F:generate_gallery_captions.py†L1-L94】
+- **Fine-tuning focused on text generation.** The image encoder is frozen and only the language modeling head updates, enabling efficient adaptation on modest hardware.
+- **Distributed-aware training loop.** Data preprocessing is coordinated across workers with the 🤗 Accelerate `Accelerator` utility and saved to disk for reuse before launching the Hugging Face `Trainer`. Training arguments default to bf16 mixed precision, gradient accumulation, and DDP-safe settings for multi-GPU jobs.
+- **Flexible evaluation tooling.** `eval.py` supports both CLIP-style embedding retrieval and GIT-based autoregressive similarity scoring, producing metrics, qualitative grids, and reports for Flickr8k or custom galleries.
+- **Captioning for personal collections.** `generate_gallery_captions.py` batches gallery images, runs beam-search or nucleus sampling, and writes JSON manifests for downstream use.
 
 ## Repository Layout
 | Path | Description |
 | --- | --- |
-| `train.py` | Typer CLI for fine-tuning GIT with configurable hyperparameters and distributed preprocessing.【F:train.py†L28-L152】 |
-| `data.py` | Flickr8k loader, deterministic split helper, and preprocessing function shared by the training script.【F:data.py†L1-L36】 |
-| `eval.py` | Cross-modal retrieval evaluation across Flickr8k splits or custom galleries with optional visualization grids.【F:eval.py†L1-L412】 |
-| `generate_gallery_captions.py` | Batch caption generator for arbitrary image folders using a fine-tuned checkpoint.【F:generate_gallery_captions.py†L1-L94】 |
-| `requirements.txt` / `environment.yml` | Python and Conda dependencies for GPU-enabled training/evaluation.【F:requirements.txt†L1-L10】【F:environment.yml†L1-L20】 |
-| `eval_git_results/` | Example evaluation artifacts including metric JSON and qualitative grids.【F:eval_git_results/metrics.json†L1-L26】 |
+| `train.py` | Typer CLI for fine-tuning GIT with configurable hyperparameters and distributed preprocessing. |
+| `data.py` | Flickr8k loader, deterministic split helper, and preprocessing function shared by the training script. |
+| `eval.py` | Cross-modal retrieval evaluation across Flickr8k splits or custom galleries with optional visualization grids. |
+| `generate_gallery_captions.py` | Batch caption generator for arbitrary image folders using a fine-tuned checkpoint. |
+| `requirements.txt` / `environment.yml` | Python and Conda dependencies for GPU-enabled training/evaluation. |
+| `eval_git_results/` | Example evaluation artifacts including metric JSON and qualitative grids. |
 
 ## Getting Started
 1. **Create an environment** (choose one):
