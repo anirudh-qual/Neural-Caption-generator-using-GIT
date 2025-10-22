@@ -2,16 +2,6 @@
 
 Neural Caption Generator using GIT fine-tunes Microsoft's [GIT](https://huggingface.co/microsoft/git-base) vision-language transformer on the Flickr8k webdataset and evaluates the resulting model on cross-modal retrieval and caption generation tasks. The scripts are written with distributed execution in mind and provide utilities for quantitative evaluation as well as captioning arbitrary galleries of images.
 
-## Pipeline at a Glance
-```mermaid
-graph LR
-    A[Load Flickr8k webdataset] --> B{Split train/val/test}
-    B --> C[Map preprocessing with AutoProcessor]
-    C --> D[Cache train/val tensors]
-    D --> E[Distributed fine-tuning with HF Trainer]
-    E --> F[Evaluate retrieval metrics (CLIP/GIT)]
-    F --> G[Generate captions for personal galleries]
-```
 
 ## Key Features
 - **Fine-tuning focused on text generation.** The image encoder is frozen and only the language modeling head updates, enabling efficient adaptation on modest hardware.【F:train.py†L55-L64】【F:train.py†L101-L115】
